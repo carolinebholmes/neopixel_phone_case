@@ -43,7 +43,10 @@ void loop() {
 //  rainbow(20);
 //  rainbowCycle(20);
 //  theaterChaseRainbow(50);
-    rainbowCycle(20);
+//  rainbowCycle(20);
+
+    //Start Hackathon Code
+    progressBar(20, 20);
     
 }
 
@@ -81,17 +84,16 @@ void rainbowCycle(uint8_t wait) {
   }
 }
 
-void rainbowCycle(uint8_t wait, uint8_t progress) {
+void progressBar(uint8_t wait, uint8_t progress) {
   uint16_t i, j;
 
   for(j=0; j<256*5; j++) { // 5 cycles of all colors on wheel
     for(i=0; i< progress; i++) {
-      strip.setPixelColor(i, Wheel(((i * 256 / strip.numPixels()) + j) & 255));
+      strip.setPixelColor(i, 255, 2555, 255);
     }
     for(i=progress; i< STRIP_LENGTH; i++) {
-      strip.setPixelColor(i, Wheel(((i * 256 / strip.numPixels()) + j) & 255));
+       strip.setPixelColor(i, Wheel(((i * 256 / strip.numPixels()) + j) & 255));
     }
-    
     strip.show();
     delay(wait);
   }
