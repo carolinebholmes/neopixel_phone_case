@@ -16,6 +16,7 @@ Adafruit_NeoPixel strip = Adafruit_NeoPixel(STRIP_LENGTH, PIN, NEO_GRB + NEO_KHZ
 float percentage = 1.0; //percentage for progress bar
  
 void setup() {
+  strip.setBrightness(25);
   strip.begin();
   strip.show(); // Initialize all pixels to 'off'
   Serial.begin(9600);
