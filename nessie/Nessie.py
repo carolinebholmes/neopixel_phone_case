@@ -46,7 +46,3 @@ if __name__ == "__main__":
     #print(customers[0].get("first_name"))
     print(get_balance(account_id))
     print(balance_change(account_id))
-
-
-
-

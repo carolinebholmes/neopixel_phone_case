@@ -41,12 +41,13 @@ def get_accounts(customer_id):
 
 if __name__ == "__main__":
     account_id = "555bed95a520e036e52b26c4"
-    start_budget = 600
+    start_budget = 600.0
     start_balance = get_balance(account_id)
-    budget_left = 600
+    budget_left = 600.0
     ser = serial.Serial("/dev/tty.usbmodemfd121", 9600)
     #customers = get_customers()
     #print(customers[0].get("first_name"))
+    
     while(budget_left > 0):
         curr_balance = get_balance(account_id)
         if(curr_balance < 0):
@@ -58,17 +59,17 @@ if __name__ == "__main__":
             budget_left += balance_diff
             if (budget_left >= 0): #no negative percent
                 print(budget_left/start_budget)
-                ser.write(budget_left/start_budget)
+                ser.write(str(budget_left/start_budget))
             else:
                 print("went over budget") #float (went over budget)
-                ser.write(0.0)
+                ser.write(str(0.0))
         else:
             #something for savings
             print("positive transaction: blink blue")
             ser.write(1.0)
 
-        ser.close()
 
+    ser.close()
 
 
 
