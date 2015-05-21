@@ -22,7 +22,7 @@ ser = serial.Serial("/dev/tty.usbmodemfd121", 9600)
 #    serin = ser.read()
 #    connected = True
 
-print 'connected'
+print ('connected')
 
 ## Tell the arduino to blink!
 ser.write('20')
