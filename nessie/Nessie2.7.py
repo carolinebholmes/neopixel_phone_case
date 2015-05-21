@@ -64,7 +64,7 @@ if __name__ == "__main__":
                 ser.write(0.0)
         else:
             #something for savings
-            print("positive trasaction: blink blue")
+            print("positive transaction: blink blue")
             ser.write(1.0)
 
         ser.close()
