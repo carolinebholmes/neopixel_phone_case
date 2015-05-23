@@ -2,8 +2,8 @@
 /* Modified from Adafruit_NeoPixel/examples/strandtest */
 #include <Adafruit_NeoPixel.h>
 #include <avr/power.h>
-#define PIN 7 // Defines the pin in the arduino being used
-#define STRIP_LENGTH 10 // Defines the number of pixels in the strip
+#define PIN 6 // Defines the pin in the arduino being used
+#define STRIP_LENGTH 7 // Defines the number of pixels in the strip
 // Parameter 1 = number of pixels in strip
 // Parameter 2 = Arduino pin number (most are valid)
 // Parameter 3 = pixel type flags, add together as needed:
@@ -16,7 +16,7 @@ float percentage; // Percentage variable for progress bar
 
 void setup() {
     percentage = 1.0;
-    strip.setBrightness(25);
+    strip.setBrightness(10);
     strip.begin();
     strip.show(); // Initialize all pixels to 'off'
     Serial.begin(9600); // Initialize Serial to read Nessie API input from Nessie2.7.py
