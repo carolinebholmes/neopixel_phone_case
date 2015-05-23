@@ -40,46 +40,48 @@ def get_accounts(customer_id):
     return accounts
 
 if __name__ == "__main__":
+    budget_or_spending = True #True means budget bar, false means savings
     account_id = "555bed95a520e036e52b26c4"
     start_budget = 600.0
     start_balance = get_balance(account_id)
     budget_left = 600.0
-    threshold = 20
-    ser = serial.Serial("/dev/tty.usbmodemfd121", 9600)
+    threshold = 2000
+    ser = serial.Serial("/dev/cu.usbserial-AD02COLG", 9600)
     #customers = get_customers()
     #print(customers[0].get("first_name"))
-    #saving_goal = 800
-    #current_savings = 0
-    while(budget_left > 0):
+    saving_goal = 800
+    current_savings = 0
+
+    while(True):
         curr_balance = get_balance(account_id)
         if(curr_balance < threshold):
             print("balance below threshold")
-        balance_diff = balance_change(account_id)
-        if (balance_diff < 0):
-            print( "blink red")
-
-            budget_left += balance_diff
-            if (budget_left >= 0): #no negative percent
-                print(budget_left/start_budget)
-                ser.write(str(budget_left/start_budget))
-            else:
-                print("went over budget") #float (went over budget)
-                ser.write(str(0.0))
+            ser.write(str(2.0))
         else:
-            #something for savings
-            print("positive transaction: blink blue")
-            ser.write(1.0)
-            """
-            current_savings += balance_diff
-             print(current_savings/savings_goal)
-            ser.write(str(current_savings/savings_goal))
-            """
+            balance_diff = balance_change(account_id)
+            if (balance_diff < 0):
+                print( "blink red")
+
+                budget_left += balance_diff
+                if (budget_left >= 0): #no negative percent
+                    print(budget_left/start_budget)
+                    ser.write(str(budget_left/start_budget))
+                else:
+                    print("went over budget") #float (went over budget)
+                    ser.write(str(0.0))
+            else:
+                #something for savings
+                print("positive transaction: blink blue")
+                ser.write(str(1.0))
+                """
+                current_savings += balance_diff
+                 print(current_savings/savings_goal)
+                ser.write(str(current_savings/savings_goal))
+                """
 
 
 
 
 
     ser.close()
-
-
 
