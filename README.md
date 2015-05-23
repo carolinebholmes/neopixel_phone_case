@@ -1,6 +1,6 @@
 # NeoPixel Phone Case
 
-This repo contains Team NULL's project for the Capital One Summit for Software Engineers 2015 Hackathon. 
+This repo contains Team NULL's project for the One-Day Capital One Summit for Software Engineers 2015 Hackathon. 
 
 The project was a 3D Printed iPhone 6 case with embedded RGB LEDs notifiying the owner of account transaction activity
 as well as budgeting information. The LEDs show a percentage bar of how much of your monthly budget was spent based off
