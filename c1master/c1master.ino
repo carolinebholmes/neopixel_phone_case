@@ -2,7 +2,7 @@
 /* Modified from Adafruit_NeoPixel/examples/strandtest */
 #include <Adafruit_NeoPixel.h>
 #include <avr/power.h>
-#define PIN 6 // Defines the pin in the arduino being used
+#define PIN 7 // Defines the pin in the arduino being used
 #define STRIP_LENGTH 10 // Defines the number of pixels in the strip
 // Parameter 1 = number of pixels in strip
 // Parameter 2 = Arduino pin number (most are valid)
@@ -15,7 +15,7 @@ Adafruit_NeoPixel strip = Adafruit_NeoPixel(STRIP_LENGTH, PIN, NEO_GRB + NEO_KHZ
 float percentage; // Percentage variable for progress bar
 
 void setup() {
-    percentage = = 1.0;
+    percentage = 1.0;
     strip.setBrightness(25);
     strip.begin();
     strip.show(); // Initialize all pixels to 'off'
