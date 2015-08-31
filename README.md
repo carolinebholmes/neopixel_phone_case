@@ -2,7 +2,7 @@
 
 This repo contains Team NULL's project for the One-Day Capital One Summit for Software Engineers 2015 Hackathon. There are no plans to update any project materials from this point on and any changes form here on out will be edits to this README or adding files that are missing (such as the phone case .cad files). 
 
-The project was a 3D Printed iPhone 6 case with embedded RGB LEDs notifiying the owner of account transaction activity
+The project was a 3D Printed iPhone 6 case with embedded RGB LEDs notifying the owner of account transaction activity
 as well as budgeting information. The LEDs show a percentage bar of how much of your monthly budget was spent based off
 of account data, and displays animations notifying the owner of withdrawals/deposits made to their account before returning
 to the budget bar animation. 
