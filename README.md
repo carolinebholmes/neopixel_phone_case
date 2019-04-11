@@ -7,7 +7,7 @@ as well as budgeting information. The LEDs show a percentage bar of how much of 
 of account data, and displays animations notifying the owner of withdrawals/deposits made to their account before returning
 to the budget bar animation. 
 
-![progressbar.jpg] (https://raw.githubusercontent.com/carolinebholmes/neopixel_phone_case/master/media/progressbar.jpg?token=AIdNf-a52Oa5bg5AQe5q_b2s_k1sQGCSks5Vae8-wA%3D%3D)
+![progressbar.jpg](https://raw.githubusercontent.com/carolinebholmes/neopixel_phone_case/master/media/progressbar.jpg?token=AIdNf-a52Oa5bg5AQe5q_b2s_k1sQGCSks5Vae8-wA%3D%3D)
 
 ![printedcases.jpg](https://raw.githubusercontent.com/carolinebholmes/neopixel_phone_case/master/media/printedcases.jpg?token=AIdNf86e-YO91c1HCNj11fJC9PshMcXtks5Vae8TwA%3D%3D)
 
